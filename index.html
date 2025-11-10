@@ -1,61 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mr Service Group</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #ffb347, #ffcc33);
-      text-align: center;
-      color: #222;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-weight: normal;
-      margin-bottom: 40px;
-    }
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    a {
-      background: #222;
-      color: white;
-      text-decoration: none;
-      padding: 15px 30px;
-      border-radius: 10px;
-      width: 200px;
-      transition: 0.3s;
-    }
-    a:hover {
-      background: #444;
-      transform: scale(1.05);
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-    }
+    :root{--bg1:#ffb347;--bg2:#ffcc33;--dark:#2b2b2b;--light:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#222}
+    header{padding:28px 16px;text-align:center}
+    h1{margin:0 0 6px;font-size:38px}
+    h2{margin:0 0 24px;font-weight:normal}
+    .wrap{max-width:720px;margin:0 auto;padding:0 16px}
+    .btn{display:block;text-decoration:none;background:#3a3a3a;color:#fff;
+         padding:16px 18px;border-radius:18px;margin:14px 0;text-align:center;
+         font-size:18px}
+    .btn:hover{opacity:.95}
+    section{background:rgba(255,255,255,.92);margin:22px 16px;border-radius:18px;
+            padding:18px}
+    section h3{margin:0 0 10px}
+    section p{margin:0 0 12px;line-height:1.7}
+    footer{padding:30px 16px;text-align:center;color:#222}
+    .top-actions{padding:0 16px 10px}
+    .mini{font-size:12px;color:#666;margin-top:6px}
   </style>
 </head>
 <body>
-  <h1>Mr Service Group</h1>
-  <h2>Delivery • TokTok • Imported</h2>
 
-  <div class="buttons">
-    <a href="#">🚴 Mr Delivery</a>
-    <a href="#">🛺 Mr TokTok</a>
-    <a href="#">📦 Mr Imported</a>
+  <!-- Hero -->
+  <header class="wrap">
+    <h1>Mr Service Group</h1>
+    <h2>Delivery • TokTok • Imported</h2>
+    <div class="top-actions">
+      <a class="btn" href="#delivery">🚴 Mr Delivery</a>
+      <a class="btn" href="#toktok">🛺 Mr TokTok</a>
+      <a class="btn" href="#imported">📦 Mr Imported</a>
+    </div>
+    <div class="mini">من الشوف لبيروت — طلبك بيوصل</div>
+  </header>
+
+  <div class="wrap">
+    <!-- Delivery -->
+    <section id="delivery">
+      <h3>🚴 Mr Delivery – توصيل مطاعم وسوبرماركت</h3>
+      <p>منستلم طلبك من المطعم/السوبرماركت وبيوصلك على العنوان بسعر واضح.</p>
+      <a class="btn" href="https://wa.me/PHONE?text=مرحبا،%20بدي%20طلب%20Mr%20Delivery%20(اسم%20المطعم%20/%20السوبرماركت%20-%20العنوان%20-%20رقم%20التواصل)">
+        اطلب عبر واتساب
+      </a>
+      <div class="mini">نصيحة: اكتب العنوان مرفق مع نقطة لوكيشن.</div>
+    </section>
+
+    <!-- TokTok -->
+    <section id="toktok">
+      <h3>🛺 Mr TokTok – مشاوير داخل الضيَع</h3>
+      <p>مشوار سريع، توصيل أغراض خفيفة، أو مشوار معاملة. تسعيرة حسب المسافة.</p>
+      <a class="btn" href="https://wa.me/PHONE?text=مرحبا،%20بدي%20مشوار%20TokTok%20(من%20وين%20لوين%20-%20الوقت)">
+        احجز مشوار واتساب
+      </a>
+    </section>
+
+    <!-- Imported -->
+    <section id="imported">
+      <h3>📦 Mr Imported – سناكات وشوكولا مستوردة</h3>
+      <p>اختيارات جاهزة للتوصيل بنفس اليوم (حسب الكمية المتوفرة).</p>
+      <a class="btn" href="https://wa.me/PHONE?text=مرحبا،%20بدي%20اطلب%20من%20Mr%20Imported%20(الاصناف%20%2B%20الكمية)">
+        اطلب من Imported
+      </a>
+      <div class="mini">منضيف لاحقاً كاتالوغ مصوّر.</div>
+    </section>
   </div>
 
-  <footer>© 2025 Mr Service - Deir El Qamar</footer>
+  <footer>© 2025 Mr Service – Deir El Qamar</footer>
+
 </body>
 </html>
-

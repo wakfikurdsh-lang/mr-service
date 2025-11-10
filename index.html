@@ -1,386 +1,93 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mr Service Group – Mr Delivery | Imported | Fix | Rent | Cleaning | Taxi | Tuktuk</title>
-  <meta name="description" content="خدمات سريعة ومهنية من الشوف لبيروت: توصيل مطاعم وسوبرماركت وغراض، سناكات مستوردة، صيانة، تأجير، تنظيف، تاكسي وتوك توك.">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Service Group</title>
   <style>
-    :root{
-      --primary:#111827; --accent:#ffb703; --muted:#6b7280; --ring:rgba(17,24,39,.08);
-      --bg:#f8fafc; --card:#ffffff; --radius:18px;
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom right, #fff7e6, #ffd580);
+      color: #222;
+      padding: 40px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:'Cairo',system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 16px}
-    /* Header */
-    .header{position:sticky;top:0;z-index:20;background:#ffffffcc;backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--ring)}
-    .nav{display:flex;align-items:center;gap:14px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:10px}
-    .logo{width:42px;height:42px;border-radius:14px;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:700}
-    .brand h1{font-size:18px;margin:0}
-    .brand p{margin:0;color:var(--muted);font-size:12px}
-    .links{margin-inline-start:auto;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:10px 14px;background:#1f2937;color:#fff}
-    .btn.alt{background:#fff;color:#111;border:1px solid var(--ring)}
-    .lang{display:inline-flex;gap:6px;border:1px solid var(--ring);border-radius:10px;overflow:hidden}
-    .lang button{background:#fff;border:0;padding:8px 10px;font-weight:600;cursor:pointer}
-    .lang button.active{background:#111;color:#fff}
-    /* Hero */
-    .hero{background:linear-gradient(135deg,#ffecb3,#ffe082 35%,#ffd54f 60%,#ffc107 100%);border-bottom:1px solid var(--ring);padding:42px 0 28px}
-    .hero h2{margin:0 0 8px;font-size:32px}
-    .hero p{margin:8px 0 18px;color:#374151}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}
-    /* Sections */
-    section{padding:28px 0}
-    .kicker{letter-spacing:.08em;color:var(--muted);font-size:12px;text-transform:uppercase}
-    .title{font-size:26px;margin:6px 0 16px}
-    .grid{display:grid;gap:14px}
-    @media(min-width:768px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .card{background:var(--card);border:1px solid var(--ring);border-radius:var(--radius);padding:16px;transition:.2s;box-shadow:0 8px 20px rgba(0,0,0,.02);display:flex;gap:12px}
-    .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.05)}
-    .icon{width:44px;height:44px;border-radius:12px;background:#111;color:#fff;display:grid;place-items:center;font-weight:700;flex:0 0 44px}
-    .section-cta{margin-top:12px}
-    .pill{font-size:12px;padding:6px 10px;border-radius:999px;background:#f3f4f6;border:1px solid #e5e7eb;margin-inline-end:8px}
-    .light{background:linear-gradient(180deg,#fff,#fff7e6)}
-    /* Contact */
-    .contact-grid{display:grid;gap:12px}
-    @media(min-width:768px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
-    .contact-card{border:1px solid var(--ring);border-radius:16px;padding:14px;background:#fff}
-    .label{font-size:12px;color:var(--muted)}
-    .val{font-weight:700}
-    /* footer */
-    footer{border-top:1px solid var(--ring);padding:18px 0;color:#6b7280;text-align:center}
-    /* fab */
-    .fab{position:fixed;left:16px;bottom:16px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:999px;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.15);z-index:40}
-    html{scroll-behavior:smooth}
-    /* language blocks */
-    #en{display:none}
+    h1 { font-size: 32px; margin-bottom: 10px; }
+    h2 { font-size: 18px; color: #555; margin-bottom: 30px; }
+    button, a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .whatsapp { background: #25D366; }
+    .instagram { background: #E1306C; }
+    .lang-btn { background: #333; }
+    .lang-btn.active { background: #111; }
+    footer { margin-top: 40px; font-size: 14px; color: #555; }
   </style>
 </head>
 <body>
+  <h1>Mr Service Group</h1>
+  <h2>Mr Delivery • Imported • Fix • Rent • Cleaning • Taxi • Tuktuk</h2>
 
-  <!-- Header -->
-  <div class="header">
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">MS</div>
-        <div>
-          <h1>Mr Service Group</h1>
-          <p>Mr Delivery • Imported • Fix • Rent • Cleaning • Taxi • Tuktuk</p>
-        </div>
-      </div>
-      <div class="links">
-        <a class="btn" href="https://wa.me/96176951746?text=مرحبا%20Mr%20Service%2C%20بدي%20استفسر%20عن%20الخدمات">واتساب</a>
-        <a class="btn alt" href="https://www.instagram.com/mr_delivery.lb?igsh=YmxvdXNtNnU4bmZ3" target="_blank" rel="noopener">إنستغرام</a>
-        <div class="lang">
-          <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
-          <button id="btn-en" onclick="setLang('en')">English</button>
-        </div>
-      </div>
-    </div>
+  <a href="https://wa.me/96176951746" class="whatsapp">💬 WhatsApp</a>
+  <a href="https://www.instagram.com/mr_delivery.lb?igsh=YmxvdXNtNnU4bmZ3" class="instagram">📷 Instagram</a>
+
+  <div style="margin-top:20px;">
+    <button id="btn-en" class="lang-btn active">English</button>
+    <button id="btn-ar" class="lang-btn">العربية</button>
   </div>
 
-  <!-- =================== Arabic =================== -->
-  <div id="ar">
-    <div class="hero">
-      <div class="container">
-        <h2>Mr Delivery – الواجهة الرسمية للمجموعة</h2>
-        <p>المطاعم، السوبرماركت، والغَرَض يوصلوا لعندك. وبجانبها خدمات: Imported، Fix، Rent، Cleaning، Taxi، Tuktuk.</p>
-        <div class="actions">
-          <a class="btn" href="#delivery">اطلب توصيل</a>
-          <a class="btn alt" href="#services">شوف كل الخدمات</a>
-        </div>
-      </div>
-    </div>
+  <!-- English -->
+  <section id="en" style="display:block;">
+    <p>Welcome to Mr Service – your all-in-one platform in Deir El Qamar 🇱🇧</p>
+    <p>Need delivery, repair, cleaning, or rental services? Just message us!</p>
+  </section>
 
-    <!-- Delivery -->
-    <section id="delivery" class="light">
-      <div class="container">
-        <div class="kicker">Mr Delivery</div>
-        <div class="title">مطاعم • سوبرماركت • غَرَض</div>
-        <div class="grid">
-          <div class="card">
-            <div class="icon">🍽️</div>
-            <div>
-              <h3>مطاعم</h3>
-              <p>من المطعم لعندك بنفس السعر – اكتب الاسم/الطلب والموقع.</p>
-              <div class="section-cta">
-                <a class="btn" href="https://wa.me/96176951746?text=مطاعم%3A%20اسم%20المطعم%20%2F%20الطلب%20%2F%20لوكيشن">اطلب واتساب</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="icon">🛒</div>
-            <div>
-              <h3>سوبرماركت</h3>
-              <p>لائحة تسوّق، صورة، أو ملاحظة – منجيب كل شي وواصل.</p>
-              <div class="section-cta">
-                <a class="btn" href="https://wa.me/96176951746?text=سوبرماركت%3A%20اللائحة%20%2B%20العنوان">اطلب واتساب</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="icon">📦</div>
-            <div>
-              <h3>غَرَض</h3>
-              <p>أي غرض من محل/بيت لبيت – ضمن الشوف أو باتجاه بيروت.</p>
-              <div class="section-cta">
-                <a class="btn" href="https://wa.me/96176951746?text=غرض%3A%20من%20وين%20%2F%20لوين%20%2F%20ملاحظات">اطلب واتساب</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top:14px">
-          <span class="pill">تغطية الشوف</span>
-          <span class="pill">إلى بيروت حسب الطلب</span>
-          <span class="pill">دفع نقدًا • Wish Money قريبًا</span>
-        </div>
-      </div>
-    </section>
+  <!-- Arabic -->
+  <section id="ar" style="display:none;">
+    <p>مرحبًا بكم في Mr Service – منصّتكم الشاملة في دير القمر 🇱🇧</p>
+    <p>بحاجة لتوصيل، تصليح، تنظيف أو إيجار؟ راسلنا مباشرة!</p>
+  </section>
 
-    <!-- All services -->
-    <section id="services">
-      <div class="container">
-        <div class="kicker">Mr Service Group</div>
-        <div class="title">الخدمات المتاحة</div>
-
-        <div class="grid">
-          <div class="card">
-            <div class="icon">🍫</div>
-            <div>
-              <h3>Mr Imported</h3>
-              <p>سناكات وشوكولا مستوردة – كاتالوغ سريع على واتساب.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Imported%3A%20بدي%20الكatalog%20لو%20سمحت">اطلب الكاتالوغ</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🛠️</div>
-            <div>
-              <h3>Mr Fix</h3>
-              <p>تصليحات بيت/مكتب: كهرباء، سباكة، نجارة… زيارة وتشخيص سريع.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Fix%3A%20نوع%20العطل%20%2F%20المنطقة%20%2F%20أفضل%20وقت">احجز فني</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🏠</div>
-            <div>
-              <h3>Mr Rent</h3>
-              <p>تأجير (غرف/معدات/أغراض). اسأل عن المتاح حسب حاجتك.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Rent%3A%20شو%20بدك%20تأجر%20%2F%20المدة%20%2F%20المنطقة">استفسار سريع</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🧼</div>
-            <div>
-              <h3>Mr Cleaning</h3>
-              <p>تنظيف شقق/محلات/بعد ترميم – باقات مرنة ومواعيد سريعة.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Cleaning%3A%20نوع%20المكان%20%2F%20المساحة%20%2F%20المنطقة">احجز تنظيف</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🚕</div>
-            <div>
-              <h3>Mr Taxi</h3>
-              <p>مشاوير خاصة بين الضيَع أو على بيروت – تسعيرة واضحة.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Taxi%3A%20من%20وين%20%2F%20لوين%20%2F%20الوقت">احجز تاكسي</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🛺</div>
-            <div>
-              <h3>Mr Tuktuk</h3>
-              <p>مشاوير داخل القرى وتوصيل أغراض خفيفة – اقتصادي وسريع.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Tuktuk%3A%20من%20وين%20%2F%20لوين%20%2F%20الوقت">احجز توك توك</a></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="light">
-      <div class="container">
-        <div class="title">تواصل معنا</div>
-        <div class="contact-grid">
-          <a class="contact-card" href="https://wa.me/96176951746"><div class="label">WhatsApp</div><div class="val">+961 76 951 746</div></a>
-          <a class="contact-card" href="https://www.instagram.com/mr_delivery.lb?igsh=YmxvdXNtNnU4bmZ3" target="_blank" rel="noopener"><div class="label">Instagram</div><div class="val">@mr_delivery.lb</div></a>
-          <div class="contact-card"><div class="label">العنوان</div><div class="val">الشوف – لبنان</div></div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- ================ /Arabic ================= -->
-
-  <!-- =================== English =================== -->
-  <div id="en">
-    <div class="hero">
-      <div class="container">
-        <h2>Mr Delivery – Official gateway for the group</h2>
-        <p>Restaurants, supermarkets, and on-demand errands to your door. Plus: Imported, Fix, Rent, Cleaning, Taxi, Tuktuk.</p>
-        <div class="actions">
-          <a class="btn" href="#delivery-en">Start Delivery</a>
-          <a class="btn alt" href="#services-en">See all services</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Delivery -->
-    <section id="delivery-en" class="light">
-      <div class="container">
-        <div class="kicker">Mr Delivery</div>
-        <div class="title">Restaurants • Supermarket • Errands</div>
-        <div class="grid">
-          <div class="card">
-            <div class="icon">🍽️</div>
-            <div>
-              <h3>Restaurants</h3>
-              <p>From restaurant to your door at the same menu price. Send name/order & location.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Restaurant:%20name%20/%20order%20/%20location">Order via WhatsApp</a></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="icon">🛒</div>
-            <div>
-              <h3>Supermarket</h3>
-              <p>Send a shopping list, a photo, or notes — we deliver all.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Supermarket:%20list%20+%20address">Order via WhatsApp</a></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="icon">📦</div>
-            <div>
-              <h3>Errand / Item</h3>
-              <p>Pick up & drop from shop/home within Chouf or towards Beirut.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Errand:%20from%20/%20to%20/%20notes">Order via WhatsApp</a></div>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top:14px">
-          <span class="pill">Chouf coverage</span>
-          <span class="pill">To Beirut on request</span>
-          <span class="pill">Cash • Wish Money soon</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- All services -->
-    <section id="services-en">
-      <div class="container">
-        <div class="kicker">Mr Service Group</div>
-        <div class="title">Available services</div>
-
-        <div class="grid">
-          <div class="card">
-            <div class="icon">🍫</div>
-            <div>
-              <h3>Mr Imported</h3>
-              <p>Imported snacks & chocolate — quick catalog on WhatsApp.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Imported:%20please%20send%20catalog">Request catalog</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🛠️</div>
-            <div>
-              <h3>Mr Fix</h3>
-              <p>Home/office repairs: electrical, plumbing, carpentry — quick visit & diagnostics.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Fix:%20issue%20type%20/%20area%20/%20best%20time">Book a technician</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🏠</div>
-            <div>
-              <h3>Mr Rent</h3>
-              <p>Rent (rooms/equipment/items). Ask for availability as needed.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Rent:%20what%20you%20need%20/%20duration%20/%20area">Quick inquiry</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🧼</div>
-            <div>
-              <h3>Mr Cleaning</h3>
-              <p>Cleaning apartments/shops/post-renovation — flexible packages.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Cleaning:%20place%20type%20/%20area%20(m2)%20/%20location">Book cleaning</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🚕</div>
-            <div>
-              <h3>Mr Taxi</h3>
-              <p>Private rides between villages or to Beirut — clear pricing.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Taxi:%20from%20/%20to%20/%20time">Book taxi</a></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="icon">🛺</div>
-            <div>
-              <h3>Mr Tuktuk</h3>
-              <p>In-village rides & light deliveries — fast and affordable.</p>
-              <div class="section-cta"><a class="btn" href="https://wa.me/96176951746?text=Tuktuk:%20from%20/%20to%20/%20time">Book tuktuk</a></div>
-            </div>
-          </div>
-        </div>
-
-    </section>
-
-    <!-- Contact -->
-    <section id="contact-en" class="light">
-      <div class="container">
-        <div class="title">Contact</div>
-        <div class="contact-grid">
-          <a class="contact-card" href="https://wa.me/96176951746"><div class="label">WhatsApp</div><div class="val">+961 76 951 746</div></a>
-          <a class="contact-card" href="https://www.instagram.com/mr_delivery.lb?igsh=YmxvdXNtNnU4bmZ3" target="_blank" rel="noopener"><div class="label">Instagram</div><div class="val">@mr_delivery.lb</div></a>
-          <div class="contact-card"><div class="label">Address</div><div class="val">Chouf – Lebanon</div></div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- ================ /English ================= -->
-
-  <footer>© <span id="y"></span> Mr Service – Deir El Qamar • Website أولي – App لاحقًا</footer>
-
-  <!-- Floating WhatsApp -->
-  <a class="fab" title="WhatsApp" href="https://wa.me/96176951746?text=مرحبا%20Mr%20Service"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.02 0C5.39 0 .02 5.37.02 12c0 2.11.55 4.18 1.6 6.01L0 24l6.17-1.6A12 12 0 0 0 12.02 24C18.65 24 24 18.63 24 12c0-3.17-1.23-6.15-3.48-8.52Z" fill="#25d366"/><path d="M18.47 14.08c-.3-.15-1.78-.88-2.06-.98-.28-.1-.49-.15-.7.15-.2.3-.8.98-.98 1.18-.18.2-.36.23-.66.08-.3-.15-1.28-.47-2.44-1.5a9.08 9.08 0 0 1-1.68-2.08c-.18-.3 0-.46.13-.61.13-.15.3-.36.46-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.7-1.69-.96-2.33-.25-.6-.5-.5-.7-.5h-.6c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.11c.15.2 2.1 3.2 5.07 4.49.71.31 1.25.5 1.68.64.7.23 1.33.2 1.83.12.56-.08 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.45-.07-.13-.26-.2-.56-.35Z" fill="#fff"/></svg></a>
+  <footer>
+    © 2025 Mr Service – Deir El Qamar • Website powered by Mr Service
+  </footer>
 
   <script>
-    // سنة تلقائياً
-    document.getElementById('y').textContent = new Date().getFullYear();
+    const en = document.getElementById('en');
+    const ar = document.getElementById('ar');
+    const btnEn = document.getElementById('btn-en');
+    const btnAr = document.getElementById('btn-ar');
 
-    // تبديل اللغة
-    function setLang(lang){
-      const ar = document.getElementById('ar');
-      const en = document.getElementById('en');
-      const btnAr = document.getElementById('btn-ar');
-      const btnEn = document.getElementById('btn-en');
-      if(lang === 'ar'){
+    function setLang(lang) {
+      if (lang === 'ar') {
+        ar.style.display = 'block';
+        en.style.display = 'none';
+        btnAr.classList.add('active');
+        btnEn.classList.remove('active');
         document.documentElement.lang = 'ar';
         document.documentElement.dir = 'rtl';
-        ar.style.display = '';
-        en.style.display = 'none';
-        btnAr.classList.add('active'); btnEn.classList.remove('active');
-      }else{
+      } else {
+        en.style.display = 'block';
+        ar.style.display = 'none';
+        btnEn.classList.add('active');
+        btnAr.classList.remove('active');
         document.documentElement.lang = 'en';
         document.documentElement.dir = 'ltr';
-        ar.style.display = 'none';
-        en.style.display = '';
-        btnEn.classList.add('active'); btnAr.classList.remove('active');
       }
-      // انزل فوق شوي بعد التبديل (تجربة ألطف)
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      localStorage.setItem('lang', lang);
     }
+
+    btnEn.addEventListener('click', () => setLang('en'));
+    btnAr.addEventListener('click', () => setLang('ar'));
+
+    const savedLang = localStorage.getItem('lang');
+    setLang(savedLang || 'en');
   </script>
 </body>
-  </html>
+</html>

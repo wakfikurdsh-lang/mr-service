@@ -1,93 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr Service Group</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr Service Group — Delivery • Imported • Fix • Rent • Cleaning • Taxi • Tuktuk</title>
+  <meta name="description" content="Your all-in-one platform in Deir El Qamar: Mr Delivery, Mr Imported, Mr Fix, Mr Rent, Mr Cleaning, Mr Taxi, Mr Tuktuk." />
+  <meta name="theme-color" content="#111827"/>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: linear-gradient(to bottom right, #fff7e6, #ffd580);
-      color: #222;
-      padding: 40px;
+    :root{
+      --bg1:#fff7ed;         /* soft peach */
+      --bg2:#fde68a;         /* warm sand */
+      --ink:#111827;         /* near black */
+      --muted:#6b7280;       /* gray */
+      --card:#ffffff;        /* white */
+      --ring:#e5e7eb;        /* border */
+      --btn:#111827;         /* dark button */
+      --btnText:#ffffff;
+      --wsp:#22c55e;         /* WhatsApp */
+      --ig:#e11d48;          /* Instagram (raspberry) */
+      --chip:#f3f4f6;
+      --chipText:#374151;
+      --shadow:0 8px 24px rgba(17,24,39,.08);
+      --radius:18px;
     }
-    h1 { font-size: 32px; margin-bottom: 10px; }
-    h2 { font-size: 18px; color: #555; margin-bottom: 30px; }
-    button, a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 22px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 100% -10%, var(--bg2), transparent 60%),
+        radial-gradient(900px 600px at -10% 20%, #fde68a80, transparent 60%),
+        linear-gradient(180deg, var(--bg1), #fff);
     }
-    .whatsapp { background: #25D366; }
-    .instagram { background: #E1306C; }
-    .lang-btn { background: #333; }
-    .lang-btn.active { background: #111; }
-    footer { margin-top: 40px; font-size: 14px; color: #555; }
+
+    .container{max-width:980px;margin:0 auto;padding:28px 18px 48px}
+    header{display:flex;align-items:center;gap:14px;margin:6px 0 22px}
+    .logo{
+      width:44px;height:44px;display:grid;place-items:center;
+      border-radius:14px;background:var(--ink);color:#fff;font-weight:800;letter-spacing:.5px;
+      box-shadow:var(--shadow)
+    }
+    .brand h1{margin:0;font-size:28px;line-height:1.2}
+    .brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+
+    .hero{
+      background:var(--card);
+      border:1px solid var(--ring);
+      border-radius:calc(var(--radius) + 6px);
+      padding:32px 22px;
+      box-shadow:var(--shadow)
+    }
+    h2{margin:0 0 10px;font-size:36px;line-height:1.15}
+    .subtitle{color:var(--muted);font-size:18px;margin-bottom:18px}
+
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 8px}
+    .chip{
+      background:var(--chip); color:var(--chipText);
+      border-radius:999px; padding:8px 14px; font-size:13px; border:1px solid #e9ecef;
+    }
+
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 10px}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:14px 18px; border-radius:999px; border:1px solid transparent;
+      font-weight:700; text-decoration:none; box-shadow:var(--shadow);
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn-dark{background:var(--btn);color:var(--btnText)}
+    .btn-wsp{background:var(--wsp);color:#fff}
+    .btn-ig{background:var(--ig);color:#fff}
+    .btn-ghost{background:#fff;border-color:var(--ring);color:var(--ink)}
+
+    .lang{display:flex;gap:10px;margin-top:10px}
+    .lang button{
+      border-radius:999px;border:1px solid var(--ring);background:#fff;color:var(--ink);
+      padding:10px 16px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)
+    }
+    .lang button.active{background:var(--btn);color:#fff;border-color:transparent}
+
+    .lead{margin:22px 0 0;font-size:20px;line-height:1.5}
+    footer{margin-top:34px;color:var(--muted);font-size:14px}
+
+    /* RTL support */
+    .rtl{direction:rtl}
+    .rtl .brand p{text-align:start}
+    .rtl .chips{justify-content:flex-start}
+    .rtl .lang{justify-content:flex-start}
+    @media (min-width:720px){
+      .hero{padding:42px 36px}
+      h2{font-size:44px}
+    }
   </style>
 </head>
 <body>
-  <h1>Mr Service Group</h1>
-  <h2>Mr Delivery • Imported • Fix • Rent • Cleaning • Taxi • Tuktuk</h2>
+  <div class="container">
+    <header>
+      <div class="logo">MS</div>
+      <div class="brand">
+        <h1 id="t-brand">Mr Service Group</h1>
+        <p id="t-tag">Delivery • Imported • Fix • Rent • Cleaning • Taxi • Tuktuk</p>
+      </div>
+    </header>
 
-  <a href="https://wa.me/96176951746" class="whatsapp">💬 WhatsApp</a>
-  <a href="https://www.instagram.com/mr_delivery.lb?igsh=YmxvdXNtNnU4bmZ3" class="instagram">📷 Instagram</a>
+    <main class="hero" id="hero">
+      <h2 id="t-head">Mr Service Group</h2>
+      <div class="subtitle" id="t-sub">Your all-in-one platform in Deir El Qamar</div>
 
-  <div style="margin-top:20px;">
-    <button id="btn-en" class="lang-btn active">English</button>
-    <button id="btn-ar" class="lang-btn">العربية</button>
+      <div class="chips" aria-label="services">
+        <span class="chip">Mr Delivery</span>
+        <span class="chip">Mr Imported</span>
+        <span class="chip">Mr Fix</span>
+        <span class="chip">Mr Rent</span>
+        <span class="chip">Mr Cleaning</span>
+        <span class="chip">Mr Taxi</span>
+        <span class="chip">Mr Tuktuk</span>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-wsp" id="wsp" href="https://wa.me/96176951746" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn btn-ig" href="https://www.instagram.com/mr_delivery.lb?igsh=YmxvdXNtNnU4bmZ3" target="_blank" rel="noopener">📷 Instagram</a>
+        <!-- جاهز لاحقًا كساب-صفحات للخدمات -->
+        <a class="btn btn-ghost" href="#" onclick="alertSoon();return false;">Mr Delivery</a>
+        <a class="btn btn-ghost" href="#" onclick="alertSoon();return false;">Mr Imported</a>
+      </div>
+
+      <div class="lang">
+        <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+        <button id="btn-ar" onclick="setLang('ar')">العربية</button>
+      </div>
+
+      <p class="lead" id="t-lead">
+        Welcome to Mr Service — your all-in-one platform in Deir El Qamar 🇱🇧.
+        Need delivery, repair, cleaning, or rental services? Just message us!
+      </p>
+      <footer id="t-foot">© 2025 Mr Service – Deir El Qamar • Website first – App later</footer>
+    </main>
   </div>
 
-  <!-- English -->
-  <section id="en" style="display:block;">
-    <p>Welcome to Mr Service – your all-in-one platform in Deir El Qamar 🇱🇧</p>
-    <p>Need delivery, repair, cleaning, or rental services? Just message us!</p>
-  </section>
-
-  <!-- Arabic -->
-  <section id="ar" style="display:none;">
-    <p>مرحبًا بكم في Mr Service – منصّتكم الشاملة في دير القمر 🇱🇧</p>
-    <p>بحاجة لتوصيل، تصليح، تنظيف أو إيجار؟ راسلنا مباشرة!</p>
-  </section>
-
-  <footer>
-    © 2025 Mr Service – Deir El Qamar • Website powered by Mr Service
-  </footer>
-
   <script>
-    const en = document.getElementById('en');
-    const ar = document.getElementById('ar');
-    const btnEn = document.getElementById('btn-en');
-    const btnAr = document.getElementById('btn-ar');
-
-    function setLang(lang) {
-      if (lang === 'ar') {
-        ar.style.display = 'block';
-        en.style.display = 'none';
-        btnAr.classList.add('active');
-        btnEn.classList.remove('active');
-        document.documentElement.lang = 'ar';
-        document.documentElement.dir = 'rtl';
-      } else {
-        en.style.display = 'block';
-        ar.style.display = 'none';
-        btnEn.classList.add('active');
-        btnAr.classList.remove('active');
-        document.documentElement.lang = 'en';
-        document.documentElement.dir = 'ltr';
+    // نصوص اللغتين (ملاحظة: أسماء الخدمات تبقى بالإنكليزي داخل العربي)
+    const i18n = {
+      en:{
+        brand:"Mr Service Group",
+        tag:"Delivery • Imported • Fix • Rent • Cleaning • Taxi • Tuktuk",
+        head:"Mr Service Group",
+        sub:"Your all-in-one platform in Deir El Qamar",
+        wsp:"💬 WhatsApp",
+        ig:"📷 Instagram",
+        lead:"Welcome to Mr Service — your all-in-one platform in Deir El Qamar 🇱🇧. Need delivery, repair, cleaning, or rental services? Just message us!",
+        foot:"© 2025 Mr Service – Deir El Qamar • Website first – App later",
+        dir:"ltr"
+      },
+      ar:{
+        brand:"Mr Service Group",
+        tag:"Mr Delivery • Mr Imported • Mr Fix • Mr Rent • Mr Cleaning • Mr Taxi • Mr Tuktuk",
+        head:"Mr Service Group",
+        sub:"منصّة متكاملة بكل خدماتك بدير القمر",
+        wsp:"واتساب",
+        ig:"إنستغرام",
+        lead:"أهلاً في Mr Service — منصّة واحدة لكل خدماتك بدير القمر 🇱🇧. توصيل، تصليح، تنظيف أو إيجار؟ ابعتلنا رسالة!",
+        foot:"© 2025 Mr Service – دير القمر • Website أوّلي – App لاحقاً",
+        dir:"rtl"
       }
-      localStorage.setItem('lang', lang);
+    };
+
+    function applyLang(lang){
+      const t=i18n[lang]||i18n.en;
+      document.getElementById('t-brand').textContent=t.brand;
+      document.getElementById('t-tag').textContent=t.tag;
+      document.getElementById('t-head').textContent=t.head;
+      document.getElementById('t-sub').textContent=t.sub;
+      document.getElementById('wsp').textContent=t.wsp;
+      document.querySelector('.btn-ig').textContent=t.ig;
+      document.getElementById('t-lead').textContent=t.lead;
+      document.getElementById('t-foot').textContent=t.foot;
+
+      document.documentElement.dir=t.dir;
+      document.documentElement.lang=lang;
+      const hero=document.getElementById('hero');
+      hero.classList.toggle('rtl', t.dir==='rtl');
+
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-ar').classList.toggle('active', lang==='ar');
+
+      localStorage.setItem('mr_lang', lang);
     }
+    function setLang(l){applyLang(l)}
+    function alertSoon(){ alert((localStorage.getItem('mr_lang')||'en')==='ar' ? "قريباً: صفحة الخدمة التفصيلية." : "Coming soon: service detail page."); }
 
-    btnEn.addEventListener('click', () => setLang('en'));
-    btnAr.addEventListener('click', () => setLang('ar'));
-
-    const savedLang = localStorage.getItem('lang');
-    setLang(savedLang || 'en');
+    // لغة افتراضية إنكليزي – مع حفظ آخر اختيار
+    const saved = localStorage.getItem('mr_lang') || 'en';
+    applyLang(saved);
   </script>
 </body>
 </html>
